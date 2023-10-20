@@ -1,0 +1,62 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+
+<div class="left-panel">
+  <form [formGroup]="locationGroup" novalidate>
+    <input
+      #location
+      formControlName="location"
+      class="search"
+      placeholder="Entrez le nom de la ville"
+      type="text"
+      id="city"
+      name="city"
+      [required]="true"
+      class="place-input"
+    />
+    <br />
+    <br />
+    <button
+      class="button1"
+      type="submit"
+      (click)="onSubmit(locationGroup.controls.location.value, true)"
+    >
+      Ajouter la ville
+    </button>
+
+    <br />
+    <br />
+
+    <button class="button2" type="button" (click)="clearWeatherData()">
+      Retirer
+    </button>
+
+    <br />
+    <br />
+
+    <div *ngFor="let loc of locationsList">
+      <span class="location-link" (click)="selectedLocation(loc.location)">{{
+        loc.location
+      }}</span>
+      <span>{{ loc.data }}</span>
+    </div>
+  </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="right-panel" *ngIf="showData">
+  <div style="display:inline-block">
+    <div>Température : {{ temperature }}</div>
+    <div>Qualité de l'air : {{ weatherDesc }}</div>
+    <div>Vent : {{ wind }}</div>
+    <div>Pression : {{ pressure }}</div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+.left-panel {
+  width: 30%;
+  display: inline-block;
+  position: fixed;
+}
+
+.right-panel {
+  width: 70%;
+  display: inline-block;
+  position: fixed;
+  margin-top: 20%;
+  left: 30%;
+}
+
+.location-link {
+  cursor: pointer;
+  font-family: system-ui;
+  font-weight: bold;
+}
+
+.right-panel div {
+  margin-top: 20px;
+  font-family: system-ui;
+}
+
+.right-panel .day {
+  margin-right: 20px;
+  display: inline-block;
+  font-family: system-ui;
+}
+
+.place-input,
+.add-city {
+  margin-left: 100px;
+  position: fixed;
+  width: 250px;
+  text-align: center;
+  font-family: system-ui;
+}
+.right-panel b {
+  display: block;
+  margin-top: 20px;
+  font-family: system-ui;
+}
+
+.button1 {
+  cursor: pointer;
+  margin-left: 100px;
+  background-color: #8fd491;
+  transition-duration: 0.4s;
+  width: 250px;
+  font-family: system-ui;
+  border-radius: 12px;
+  font-size: 15px;
+  border: 1px solid #040111;
+}
+
+.button2 {
+  cursor: pointer;
+  margin-left: 100px;
+  background-color: #dd7878;
+  transition-duration: 0.4s;
+  width: 250px;
+  font-family: system-ui;
+  border-radius: 12px;
+  font-size: 15px;
+  border: 1px solid #040111;
+}
+
+.button1:hover {
+  background-color: #16dd37;
+  color: white;
+}
+
+.button2:hover {
+  background-color: #e71414;
+  color: white;
+}
